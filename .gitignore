@@ -1,0 +1,6 @@
+# Dependencies
+/node_modules/
+/src/node_modules/@sapper/
+
+# Build artefacts
+/__sapper__/
