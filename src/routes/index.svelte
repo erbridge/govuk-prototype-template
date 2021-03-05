@@ -1,4 +1,10 @@
+<script lang="ts">
+  import PhaseBanner from "../components/PhaseBanner.svelte";
+</script>
+
 <div class="govuk-width-container">
+  <PhaseBanner phase="prototype">This is a prototype</PhaseBanner>
+
   <main class="govuk-main-wrapper" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
