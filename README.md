@@ -215,3 +215,12 @@ If your project lives outside the WSL root directory,
 [this limitation](https://github.com/microsoft/WSL/issues/4169) is known to
 cause live-reloading to fail. See
 [this issue](https://github.com/sveltejs/sapper/issues/1150) for details.
+
+## Licencing
+
+The code and content of this repository that originated in the
+[template](https://github.com/erbridge/govuk-prototype-template) it was created
+from is covered by the
+[Climate Strike (MIT) License 1.0](https://github.com/erbridge/govuk-prototype-template/blob/main/LICENCE).
+That means that it may not be used by companies that rely on fossil fuel
+extraction as their primary means of revenue.
