@@ -1,9 +1,11 @@
 <script lang="ts">
+  import Breadcrumbs from "../components/Breadcrumbs.svelte";
   import PhaseBanner from "../components/PhaseBanner.svelte";
 </script>
 
 <div class="govuk-width-container">
   <PhaseBanner phase="prototype">This is a prototype</PhaseBanner>
+  <Breadcrumbs items={[{ text: "Home" }]} />
 
   <main class="govuk-main-wrapper" id="main-content" role="main">
     <div class="govuk-grid-row">
