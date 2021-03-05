@@ -9,9 +9,9 @@
   <title>{status}</title>
 </svelte:head>
 
-<h1>{status}</h1>
+<h1 class="govuk-heading-xl">{status}</h1>
 
-<p>{error.message}</p>
+<p class="govuk-body">{error.message}</p>
 
 {#if dev && error.stack}
   <pre>{error.stack}</pre>

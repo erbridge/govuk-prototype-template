@@ -10,8 +10,11 @@ polka()
   .use(
     compression({ threshold: 0 }),
     sirv("static", { dev }),
-    sapper.middleware()
+    sapper.middleware({
+      ignore: /^\/assets/,
+    })
   )
+  .use("assets", sirv("node_modules/govuk-frontend/govuk/assets", { dev }))
   .listen(PORT, (err: any) => {
     if (err) console.log("error", err);
   });

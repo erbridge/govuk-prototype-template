@@ -37,3 +37,7 @@ declare module "*.webp" {
   const value: string;
   export = value;
 }
+
+declare module "govuk-frontend/govuk/all" {
+  export const initAll: () => void;
+}

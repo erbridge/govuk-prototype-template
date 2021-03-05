@@ -88,6 +88,13 @@ files, and use the `.ts` file extensions for modules.
 created during the build. You, therefore, need to run or build the project once
 to avoid warnings about missing dependencies.
 
+#### Using SCSS
+
+This project supports SCSS as an optional feature. If you don't want to write
+SCSS, you can still write plain CSS.
+
+To opt in to SCSS, add `lang="scss"` to your `<style>` tags in Svelte files.
+
 ## Using the directory structure
 
 Sapper expects to find two directories in the root of your project — `src` and
@@ -218,7 +225,17 @@ cause live-reloading to fail. See
 
 ## Licencing
 
-The code and content of this repository that originated in the
+Please note that the default GDS Transport font is only licenced for subdomains
+of `service.gov.uk`. Please see the
+[GOV.UK Design System's note on fonts](https://design-system.service.gov.uk/styles/typography/#font)
+if you're not sure what this means for your project.
+
+Some of the templates and patterns in this repository are covered by the
+[Open Government Licence 3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/),
+where they were sourced from the
+[GOV.UK Design System](https://design-system.service.gov.uk/).
+
+The remaining code and content of this repository that originated in the
 [template](https://github.com/erbridge/govuk-prototype-template) it was created
 from is covered by the
 [Climate Strike (MIT) License 1.0](https://github.com/erbridge/govuk-prototype-template/blob/main/LICENCE).

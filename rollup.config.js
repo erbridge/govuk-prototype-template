@@ -4,6 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
 import typescript from "@rollup/plugin-typescript";
 import url from "@rollup/plugin-url";
+import autoprefixer from "autoprefixer";
 import path from "path";
 import svelte from "rollup-plugin-svelte";
 import { terser } from "rollup-plugin-terser";
@@ -19,6 +20,8 @@ const onwarn = (warning, onwarn) =>
   (warning.code === "MISSING_EXPORT" && /'preload'/.test(warning.message)) ||
   (warning.code === "CIRCULAR_DEPENDENCY" &&
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
+  (warning.code === "PLUGIN_WARNING" &&
+    /Unused CSS selector/.test(warning.message)) ||
   warning.code === "THIS_IS_UNDEFINED" ||
   onwarn(warning);
 
@@ -35,7 +38,12 @@ export default {
         },
       }),
       svelte({
-        preprocess: sveltePreprocess({ sourceMap: dev }),
+        preprocess: sveltePreprocess({
+          postcss: {
+            plugins: [autoprefixer],
+          },
+          sourceMap: dev,
+        }),
         compilerOptions: {
           dev,
           hydratable: true,
@@ -98,7 +106,12 @@ export default {
         },
       }),
       svelte({
-        preprocess: sveltePreprocess({ sourceMap: dev }),
+        preprocess: sveltePreprocess({
+          postcss: {
+            plugins: [autoprefixer],
+          },
+          sourceMap: dev,
+        }),
         compilerOptions: {
           dev,
           generate: "ssr",
