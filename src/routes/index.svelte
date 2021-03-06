@@ -18,6 +18,13 @@
           This page is <code>src/routes/index.svelte</code>. Make changes there
           and see them appear here!
         </p>
+
+        <p class="govuk-body">
+          If you need some inspiration, take a look at the <a
+            class="govuk-link"
+            href="examples">examples</a
+          >.
+        </p>
       </div>
     </div>
   </main>
