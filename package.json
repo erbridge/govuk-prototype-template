@@ -35,7 +35,7 @@
     "autoprefixer": "^10.2.5",
     "classnames": "^2.2.6",
     "govuk-frontend": "^3.11.0",
-    "postcss": "^8.2.7",
+    "postcss": "^8.2.15",
     "rollup": "^2.3.4",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
